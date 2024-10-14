@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from SecondSpin import views as a_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', a_views.home, name='home'),
+    path('about', a_views.about, name='about_us'),
+    path('product_category', a_views.product_category, name='category'),
+
 ]
