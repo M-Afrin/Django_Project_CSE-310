@@ -21,7 +21,7 @@ from SecondSpin import views as a_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', a_views.home, name='home'),
-    path('about', a_views.about, name='about_us'),
-    path('product_category', a_views.product_category, name='category'),
+    path('about/', a_views.about, name='about_us'),
+    path('product_category/', a_views.product_category, name='category'),
 
 ]
