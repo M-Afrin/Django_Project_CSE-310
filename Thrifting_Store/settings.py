@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Thrifting_Store.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'All_html'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
