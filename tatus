@@ -1,0 +1,128 @@
+[1mdiff --git a/All_html/SecondSpin/about b/All_html/SecondSpin/about[m
+[1mindex 9195556..e44f8c8 100644[m
+[1m--- a/All_html/SecondSpin/about[m
+[1m+++ b/All_html/SecondSpin/about[m
+[36m@@ -1,13 +1,126 @@[m
+ <!DOCTYPE html>[m
+ <html lang="en">[m
+[31m-[m
+ <head>[m
+[31m-    <meta charset="UTF=8">[m
+[31m-    <title>Title</title>[m
+[31m-</head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>About Us - SecondSpin</title>[m
+[32m+[m[32m    <!-- Bootstrap CSS -->[m
+[32m+[m[32m    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">[m
+[32m+[m[32m    <!-- Font Awesome for icons -->[m
+[32m+[m[32m    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">[m
+[32m+[m[32m    <!-- Custom CSS -->[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <style>[m
+[32m+[m[32m        /* Additional styles for the About Us section */[m
+[32m+[m[32m        .about-us {[m
+[32m+[m[32m            height: 80vh; /* Set height to fill a large portion of the viewport */[m
+[32m+[m[32m            display: flex; /* Use flexbox to center content */[m
+[32m+[m[32m            flex-direction: column; /* Stack children vertically */[m
+[32m+[m[32m            justify-content: center; /* Center vertically */[m
+[32m+[m[32m            align-items: center; /* Center horizontally */[m
+[32m+[m[32m            text-align: center; /* Center text */[m
+[32m+[m[32m            padding: 20px; /* Add some padding */[m
+[32m+[m[32m        }[m
+[32m+[m[41m        [m
+[32m+[m[32m        .about-us h1 {[m
+[32m+[m[32m            font-size: 48px; /* Increase font size for the heading */[m
+[32m+[m[32m            margin-bottom: 20px; /* Space between heading and paragraph */[m
+[32m+[m[32m            color: black; /* Set header color to black */[m
+[32m+[m[32m            font-weight: bold; /* Make the heading bold */[m
+[32m+[m[32m            text-shadow: none; /* Remove shadow to make it cleaner */[m
+[32m+[m[32m        }[m
+ [m
+[32m+[m[32m        .about-us .content {[m
+[32m+[m[32m            background-color: rgba(128, 128, 128, 0.8); /* Opaque greyish background */[m
+[32m+[m[32m            padding: 20px; /* Add padding for inner content */[m
+[32m+[m[32m            border-radius: 10px; /* Round the corners */[m
+[32m+[m[32m            max-width: 800px; /* Limit the width for better readability */[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        .about-us p {[m
+[32m+[m[32m            font-size: 20px; /* Adjust font size for better readability */[m
+[32m+[m[32m            margin-bottom: 10px; /* Space between paragraphs */[m
+[32m+[m[32m            color: white; /* Set paragraph color to white */[m
+[32m+[m[32m        }[m
+[32m+[m[32m    </style>[m
+[32m+[m[32m</head>[m
+ <body>[m
+[31m-    <h1>About us</h1>[m
+[31m-</body>[m
+[32m+[m[32m    <!-- Navbar -->[m
+[32m+[m[32m    <nav class="navbar navbar-expand-lg custom-navbar">[m
+[32m+[m[32m        <div class="container-fluid">[m
+[32m+[m[32m            <!-- Logo -->[m
+[32m+[m[32m            <a class="navbar-brand" href="#">SECONDSPIN</a>[m
+[32m+[m[32m            <!-- Menu Links -->[m
+[32m+[m[32m            <div class="collapse navbar-collapse">[m
+[32m+[m[32m                <ul class="navbar-nav me-auto mb-2 mb-lg-0">[m
+[32m+[m[32m                    <li class="nav-item me-3">[m
+[32m+[m[32m                        <a class="nav-link" href="index.html">Home</a>[m
+[32m+[m[32m                    </li>[m
+[32m+[m[32m                    <li class="nav-item me-3">[m
+[32m+[m[32m                        <a class="nav-link" href="about.html">About Us</a>[m
+[32m+[m[32m                    </li>[m
+[32m+[m[32m                    <li class="nav-item me-3">[m
+[32m+[m[32m                        <a class="nav-link" href="contact.html">Contact</a>[m
+[32m+[m[32m                    </li>[m
+[32m+[m[32m                </ul>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <!-- Right-side elements -->[m
+[32m+[m[32m            <div class="d-flex align-items-center ms-auto">[m
+[32m+[m[32m                <div class="d-flex align-items-center">[m
+[32m+[m[32m                    <div class="dropdown me-3">[m
+[32m+[m[32m                        <a class="nav-link dropdown-toggle text-dark" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lan</a>[m
+[32m+[m[32m                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">[m
+[32m+[m[32m                            <li><a class="dropdown-item" href="#">English</a></li>[m
+[32m+[m[32m                            <li><a class="dropdown-item" href="#">Bengali</a></li>[m
+[32m+[m[32m                        </ul>[m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                    <div class="dropdown me-3">[m
+[32m+[m[32m                        <a class="nav-link dropdown-toggle text-dark" href="#" id="helpDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">HELP</a>[m
+[32m+[m[32m                        <ul class="dropdown-menu" aria-labelledby="helpDropdown">[m
+[32m+[m[32m                            <li><a class="dropdown-item" href="#">FAQ</a></li>[m
+[32m+[m[32m                            <li><a class="dropdown-item" href="#">Delivery Policy</a></li>[m
+[32m+[m[32m                        </ul>[m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div class="d-flex search-bar mx-4">[m
+[32m+[m[32m                    <input class="form-control me-2" type="search" placeholder="WHAT DO YOU WANT TO BUY?" aria-label="Search">[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div class="d-flex align-items-center right-icons">[m
+[32m+[m[32m                    <a href="#" class="text-dark me-2"><i class="fas fa-user"></i></a>[m
+[32m+[m[32m                    <a href="#" class="text-dark me-3">Sign Up or Login</a>[m
+[32m+[m[32m                    <a href="#" class="text-dark me-3"><i class="fas fa-shopping-cart"></i></a>[m
+[32m+[m[32m                    <a href="#" class="btn btn-outline-primary">SELL NOW</a>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </nav>[m
+[32m+[m
+[32m+[m[32m    <!-- About Us Section -->[m
+[32m+[m[32m    <section class="about-us">[m
+[32m+[m[32m        <h1>About Us</h1>[m
+[32m+[m[32m        <div class="content"> <!-- Added a div for the content background -->[m
+[32m+[m[32m            <p>Welcome to SecondSpin! We are dedicated to helping you revive your closet with high-quality, pre-loved fashion. Our mission is to provide a platform for sustainable shopping and to make second-hand shopping stylish and accessible for everyone.</p>[m
+[32m+[m[32m            <p>Our team is passionate about fashion and sustainability, and we believe that every item has a story. Join us on this journey to make fashion more sustainable!</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </section>[m
+ [m
+[31m-</html>[m
+\ No newline at end of file[m
+[32m+[m[32m    <!-- Footer Section -->[m
+[32m+[m[32m    <footer class="footer-section">[m
+[32m+[m[32m        <div class="container">[m
+[32m+[m[32m            <div class="row justify-content-center text-center">[m
+[32m+[m[32m                <div class="col-md-6">[m
+[32m+[m[32m                    <h5 class="mb-3">Find Us</h5>[m
+[32m+[m[32m                    <div class="social-icons">[m
+[32m+[m[32m                        <a href="https://wa.link/bjurxu" class="social-icon"><i class="fab fa-whatsapp"></i></a>[m
+[32m+[m[32m                        <a href="https://m.me/yourmessengerlink" class="social-icon"><i class="fab fa-faceb
