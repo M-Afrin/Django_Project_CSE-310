@@ -9,7 +9,111 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS -->
+    
     <link rel="stylesheet" href="styles.css">
+   <style>
+    /* Background Image for the entire page */
+body {
+    background: url('images/c.jpg') center center/cover no-repeat; 
+    background-attachment: fixed; /* Ensures the background stays fixed when scrolling */
+    height: 100vh; /* Set height to fill the entire viewport */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Set a global font style */
+}
+
+/* Custom Navbar */
+.custom-navbar {
+    background-color: #f5f5dc; /* Lightest beige background */
+    padding: 20px;
+}
+
+.navbar-brand {
+    font-family: 'Serif', serif;
+    font-size: 24px;
+    color: #343a40;
+}
+
+/* Search Bar */
+.search-bar {
+    position: relative; /* Position relative for the icon */
+}
+
+.search-bar input {
+    border-radius: 20px;
+    padding: 8px 15px;
+    width: 300px;
+}
+
+/* Search Icon */
+.search-icon {
+    margin-left: -35px; /* Move it outside of the input */
+    color: #343a40; /* Icon color */
+    cursor: pointer; /* Change cursor to pointer */
+    align-self: center; /* Align it vertically */
+}
+
+/* Right icons styling */
+.right-icons a {
+    font-size: 16px;
+    color: #343a40;
+}
+
+/* Sell Now button */
+.right-icons .btn {
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 5px 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    background-color: rgba(108, 117, 125, 0.8); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Shop Now button */
+.hero-content .btn {
+    background-color: white;
+    color: #343a40;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.hero-content .btn:hover {
+    background-color: #343a40; /* Dark color on hover */
+    color: white; /* White text on hover */
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #343a40;
+    padding: 20px;
+    color: white;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+   </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -23,7 +127,7 @@
                 <!-- Menu Links -->
                 <div class="d-flex align-items-center me-4">
                     <a class="nav-link text-dark me-3" href="#">Home</a>
-                    <a class="nav-link text-dark me-3" href="about_us.html">About Us</a>
+                    <a class="nav-link text-dark me-3" href="{% url 'about' %}">About Us</a>
                     <a class="nav-link text-dark me-3" href="#">Contact</a>
                     <a class="nav-link text-dark me-3" href="#">FAQ</a>
                     <a class="nav-link text-dark me-3" href="#">Privacy Policy</a>
