@@ -89,7 +89,7 @@
                     <a href="#" class="text-dark me-2"><i class="fas fa-user"></i></a>
                     <a href="#" class="text-dark me-3">Sign Up or Login</a>
                     <a href="#" class="text-dark me-3"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="#" class="btn btn-outline-primary">SELL NOW</a>
+                    <a href="#" class="btn btn-outline-primary">Sell Now</a>
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
     <section class="about-us">
         <h1>About Us</h1>
         <div class="content"> <!-- Added a div for the content background -->
-            <p>Welcome to SecondSpin! We are dedicated to helping you revive your closet with high-quality, pre-loved fashion. Our mission is to provide a platform for sustainable shopping and to make second-hand shopping stylish and accessible for everyone.</p>
+            <p>Welcome to SecondSpin! We are dedicated to helping you revive your closet with high-quality and pre-loved fashion. Our mission is to provide a platform for sustainable shopping and to make second-hand shopping stylish and accessible for everyone.</p>
             <p>Our team is passionate about fashion and sustainability, and we believe that every item has a story. Join us on this journey to make fashion more sustainable!</p>
         </div>
     </section>

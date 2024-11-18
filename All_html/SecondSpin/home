@@ -26,7 +26,7 @@
                     <a class="nav-link text-dark me-3" href="about_us.html">About Us</a>
                     <a class="nav-link text-dark me-3" href="#">Contact</a>
                     <a class="nav-link text-dark me-3" href="#">FAQ</a>
-                    <a class="nav-link text-dark me-3" href="#">Delivery Policy</a>
+                    <a class="nav-link text-dark me-3" href="#">Privacy Policy</a>
                 </div>
 
                 <!-- Language dropdown -->
@@ -59,7 +59,7 @@
                     <a href="#" class="text-dark me-2"><i class="fas fa-user"></i></a>
                     <a href="#" class="text-dark me-3">Sign Up or Login</a>
                     <a href="#" class="text-dark me-3"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="#" class="btn btn-outline-primary">SELL NOW</a>
+                    <a href="#" class="btn btn-outline-primary">Sell Now</a>
                 </div>
             </div>
         </div>
