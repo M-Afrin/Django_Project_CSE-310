@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ product.name }} - Details
+{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="flex flex-col lg:flex-row">
+        <!-- Product Image -->
+        <div class="lg:w-1/2">
+            {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}"
+                class="w-full h-auto object-cover rounded-lg shadow-md">
+            {% else %}
+            <div class="w-full h-96 bg-gray-200 flex items-center justify-center text-gray-500 rounded-lg shadow-md">
+                No Image
+            </div>
+            {% endif %}
+        </div>
+        <!-- Product Details -->
+        <div class="lg:w-1/2 lg:pl-8 mt-8 lg:mt-0">
+            <h1 class="text-3xl font-bold text-gray-800">{{ product.name }}</h1>
+            <p class="text-xl text-gray-600 mt-2">৳ {{ product.price }}</p>
+            <p class="text-gray-600 mt-4">
+                Category: <span class="font-medium">{{ product.get_category_display }}</span>
+            </p>
+            <p class="text-gray-600 mt-1">
+                Seller: <span class="font-medium">{{ product.seller.user.username }}</span>
+            </p>
+            <p class="text-gray-700 mt-4">{{ product.description }}</p>
+            <!-- Add to Cart Button -->
+            <div class="mt-6">
+                <a href="{% url 'add_to_cart' product.id %}"
+                    class="block w-full text-center bg-gray-900 text-white py-3 rounded-lg hover:bg-black">
+                    Add to Bag
+                    <i class="bx bx-shopping-bag text-xl ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
