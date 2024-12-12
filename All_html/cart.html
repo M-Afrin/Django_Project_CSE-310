@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}
+Your Shopping Cart
+{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8 min-h-screen">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6 text-gray-800">Your Shopping Cart</h1>
+        
+        {% if cart_items %}
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <div class="divide-y divide-gray-200">
+                {% for item in cart_items %}
+                <div class="flex items-center p-4 hover:bg-gray-50 transition-colors">
+                    <!-- Product Image -->
+                    <div class="w-20 h-20 mr-4 flex-shrink-0">
+                        <img 
+                            src="{{ item.product.image.url }}" 
+                            alt="{{ item.product.name }}" 
+                            class="w-full h-full object-cover rounded-md"
+                        >
+                    </div>
+                    
+                    <!-- Product Details -->
+                    <div class="flex-grow">
+                        <h2 class="text-lg font-semibold text-gray-800">{{ item.product.name }}</h2>
+                        <p class="text-gray-600">Price: ৳ {{ item.product.price }}</p>
+                    </div>
+                    
+                    <!-- Quantity Controls -->
+                    <div class="flex items-center space-x-3 mr-4">
+                        <a href="{% url 'update_cart_item' item.id 'decrease' %}" 
+                           class="text-gray-500 hover:text-red-500 transition">
+                            <i class="bx bx-minus-circle text-2xl"></i>
+                        </a>
+                        <span class="text-gray-800 font-medium">{{ item.quantity }}</span>
+                        <a href="{% url 'update_cart_item' item.id 'increase' %}" 
+                           class="text-gray-500 hover:text-green-500 transition">
+                            <i class="bx bx-plus-circle text-2xl"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Total and Remove -->
+                    <div class="flex items-center space-x-4">
+                        <span class="font-bold text-gray-800">৳ {{ item.get_total_price }}</span>
+                        <a href="{% url 'update_cart_item' item.id 'remove' %}" 
+                           class="text-red-500 hover:text-red-700 transition">
+                            <i class="bx bx-trash text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <!-- Cart Summary -->
+        <div class="mt-6 bg-white shadow-md rounded-lg p-6">
+            <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold text-gray-800">Total</span>
+                <span class="text-2xl font-bold text-green-600">৳ {{ total_price }}</span>
+            </div>
+            
+            <div class="mt-6">
+                <a href="{% url 'checkout' %}" 
+                   class="w-full block text-center bg-blue-600 text-white py-3 rounded-lg 
+                          hover:bg-blue-700 transition duration-300 ease-in-out 
+                          transform hover:scale-105 focus:outline-none focus:ring-2 
+                          focus:ring-blue-500 focus:ring-opacity-50">
+                    Proceed to Checkout
+                    <i class="bx bx-chevron-right inline-block align-middle ml-2"></i>
+                </a>
+            </div>
+        </div>
+        
+        {% else %}
+        <div class="text-center bg-white shadow-md rounded-lg p-10">
+            <i class="bx bx-cart text-6xl text-gray-300 mb-4"></i>
+            <p class="text-xl text-gray-600">Your cart is empty</p>
+            <a href="{% url 'shop' %}" 
+               class="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg 
+                      hover:bg-blue-600 transition">
+                Continue Shopping
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
