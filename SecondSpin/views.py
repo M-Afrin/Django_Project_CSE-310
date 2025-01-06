@@ -202,7 +202,7 @@ def shop(request):
     # Fetch all unique categories for the filter dropdown
     categories = Product.CATEGORY_CHOICES
 
-    return render(request, 'SecondSpin/shop.html', {
+    return render(request, 'shop.html', {
         'products': products,
         'categories': categories,
         'selected_category': category_filter,
@@ -210,7 +210,7 @@ def shop(request):
 
 def product_detail(request, product_id):
     product = get_object_or_404(Product, id=product_id)
-    return render(request, 'SecondSpin/product_detail.html', {'product': product})
+    return render(request, 'product_detail.html', {'product': product})
 
 
 @login_required(login_url='login')
