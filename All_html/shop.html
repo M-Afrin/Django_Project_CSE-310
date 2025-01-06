@@ -20,7 +20,7 @@ Shop Now
                     class="px-4 py-2 border rounded-lg focus:outline-none focus:border-gray-900">
                     <option value="" {% if not selected_category %}selected{% endif %}>All</option>
                     {% for code, name in categories %}
-                    <option value="{{ code }}" {% if selected_category==code %}selected{% endif %}>
+                    <option value="{{ code }}" {% if selected_category == code %}selected{% endif %}>
                         {{ name }}
                     </option>
                     {% endfor %}
